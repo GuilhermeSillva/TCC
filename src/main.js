@@ -6,6 +6,12 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+// usa o meta.title definido no vue router como título da pagina
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title
+  next()
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
