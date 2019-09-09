@@ -13,7 +13,7 @@ export default {
     return {}
   },
   methods: {
-    logout: function() {
+    logout: function () {
       firebase.auth().signOut().then(() => {
         this.$router.replace('/')
       })
@@ -26,7 +26,8 @@ export default {
 button {
   border-radius: 25px;
   margin-top: 20px;
-  width: 10%;
+  width: 200px;
+  height: 28px;
   cursor: pointer;
 }
 

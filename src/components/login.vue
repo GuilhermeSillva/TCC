@@ -55,7 +55,8 @@ input {
 button {
   border-radius: 25px;
   margin-top: 20px;
-  width: 10%;
+  width: 200px;
+  height: 28px;
   cursor: pointer;
 }
 p {
