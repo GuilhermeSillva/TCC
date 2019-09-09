@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import firebase from 'firebase'
 import Router from 'vue-router'
 import login from '@/components/login'
 import singUp from '@/components/singUp'
@@ -6,8 +7,12 @@ import home from '@/components/home'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
+    {
+      path: '*',
+      redirect: '/'
+    },
     {
       path: '/',
       name: 'Login',
@@ -29,8 +34,23 @@ export default new Router({
       name: 'home',
       component: home,
       meta: {
-        title: 'home'
+        title: 'home',
+        // necessita autenticaçao para ir pra /home
+        requiresAuth: true
       }
     }
   ]
 })
+
+// firebase retorna curretnUser para buscar o usuario logado, caso retorne null não há usuarios logados
+
+router.beforeEach((to, form, next) => {
+  const currentUser = firebase.auth().currentUser
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
+
+  if (requiresAuth && !currentUser) next('login')
+  else if (!requiresAuth && currentUser) next('home')
+  else next()
+})
+
+export default router

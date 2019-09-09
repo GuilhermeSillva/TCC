@@ -8,18 +8,22 @@ import { firebaseConfig } from '../config/firebase'
 
 Vue.config.productionTip = false
 
+// inicializa o firebase usando as configuraçoes em config/firebase
 firebase.initializeApp(firebaseConfig)
 
-// usa o meta.title definido no vue router como título da pagina
-router.beforeEach((to, from, next) => {
-  document.title = to.meta.title
-  next()
-})
+// inicializa app apenas quando firebase estiver inicializado
+firebase.auth().onAuthStateChanged(() => {
+  // usa o meta.title definido no vue router como título da pagina
+  router.beforeEach((to, from, next) => {
+    document.title = to.meta.title
+    next()
+  })
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+  /* eslint-disable no-new */
+  new Vue({
+    el: '#app',
+    router,
+    components: { App },
+    template: '<App/>'
+  })
 })

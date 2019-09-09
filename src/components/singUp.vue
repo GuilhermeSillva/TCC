@@ -30,7 +30,7 @@ export default {
       firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
         function (user) {
           alert('Conta criada com sucesso')
-          self.$router.replace('/')
+          self.$router.replace('home')
         },
         function (err) {
           alert(err.message)
