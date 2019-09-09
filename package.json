@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "firebase": "^6.6.0",
+    "firebase-admin": "^8.5.0",
     "js-yaml": "^3.13.1",
     "mime": "^2.4.4",
     "node-sass": "^4.12.0",
