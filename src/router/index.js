@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import login from '@/components/login'
 import singUp from '@/components/singUp'
 import home from '@/components/home'
+import forgotPass from '@/components/forgotPass'
 
 Vue.use(Router)
 
@@ -19,6 +20,14 @@ const router = new Router({
       component: login,
       meta: {
         title: 'Entrar'
+      }
+    },
+    {
+      path: '/forgot-pass',
+      name: 'forgotPass',
+      component: forgotPass,
+      meta: {
+        title: 'Esqueci minha Senha'
       }
     },
     {
