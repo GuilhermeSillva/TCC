@@ -1,0 +1,191 @@
+%alert-icons
+  .danger-icon
+    color: $danger
+    &.dont-animate
+      &:before
+        animation: none !important
+    &.fast
+      &:before
+        animation: pulse-icon .25s infinite alternate !important
+    &.faster
+      &:before
+        animation: pulse-icon .175s infinite alternate !important
+    &:before
+      font-family: "Font Awesome 5 Pro"
+      font-weight: bold
+      content: '\f071'
+      font-size: .75em
+      transition: .2s
+      animation: pulse-icon .5s infinite alternate
+
+  .warning-icon
+    color: $warning
+    &.dont-animate
+      &:before
+        animation: none !important
+    &.fast
+      &:before
+        animation: pulse-icon .25s infinite alternate !important
+    &.faster
+      &:before
+        animation: pulse-icon .175s infinite alternate !important
+    &:before
+      font-family: "Font Awesome 5 Pro"
+      font-weight: bold
+      content: '\f071'
+      font-size: .75em
+      transition: .2s
+      animation: pulse-icon .5s infinite alternate
+
+  .info-icon
+    color: $info
+    &.dont-animate
+      &:before
+        animation: none !important
+    &:before
+      font-family: "Font Awesome 5 Pro"
+      font-weight: bold
+      content: '\f071'
+      font-size: .75em
+      transition: .2s
+      animation: pulse-icon-info .5s infinite alternate
+
+  .success-icon
+    color: $success
+    &.dont-animate
+      &:before
+        animation: none !important
+    &:before
+      font-family: "Font Awesome 5 Pro"
+      font-weight: bold
+      content: '\f071'
+      font-size: .75em
+      transition: .2s
+      animation: pulse-icon-info .5s infinite alternate 
+
+  .danger-icon-circle
+    color: $danger
+    &.animate
+      &:before
+        animation: pulse-icon-circle .5s infinite alternate !important
+    &:before
+      font-family: "Font Awesome 5 Pro"
+      font-weight: bold
+      content: '\f06a'
+      transition: .2s
+      animation: none 
+
+  .warning-icon-circle
+    color: $warning
+    &.animate
+      &:before
+        animation: pulse-icon-circle .5s infinite alternate !important
+    &:before
+      font-family: "Font Awesome 5 Pro"
+      font-weight: bold
+      content: '\f06a'
+      transition: .2s
+      animation: none 
+
+  .ready-icon-circle
+    color: $secondary
+    &.animate
+      &:before
+        animation: pulse-icon-circle-ready .5s infinite alternate !important
+    &:before
+      font-family: "Font Awesome 5 Pro"
+      font-weight: bold
+      content: '\f35a'
+      transition: .2s
+      animation: none 
+
+  .info-icon-circle
+    color: $info
+    &.animate
+      &:before
+        animation: pulse-icon-circle-info .5s infinite alternate !important
+    &:before
+      font-family: "Font Awesome 5 Pro"
+      font-weight: bold
+      content: '\f05a'
+      transition: .2s
+      animation: none 
+
+  .success-icon-circle
+    color: $success
+    &.animate
+      &:before
+        animation: pulse-icon-circle-success .5s infinite alternate
+    &:before
+      font-family: "Font Awesome 5 Pro"
+      font-weight: bold
+      content: '\f058'
+      transition: .2s
+      animation: none !important
+
+  @keyframes pulse-icon
+    0%
+      text-shadow: 0 0 0 transparentize($warning, 0.4)
+      content: '\f2ec'
+    100%
+      text-shadow: 0px 0px 8px transparentize($warning, 0.4) 
+      content: '\f071'
+    0%
+      text-shadow: 0 0 0 transparentize($warning, 0.4)
+      content: '\f2ec'
+
+  @keyframes pulse-icon-info
+    0%
+      text-shadow: 0 0 0 transparentize($info, 0.3)
+      content: '\f2ec'
+    100%
+      text-shadow: 0px 0px 8px transparentize($info, 0.3) 
+      content: '\f071'
+    0%
+      text-shadow: 0 0 0 transparentize($info, 0.3)
+      content: '\f2ec'
+    
+  @keyframes pulse-icon-circle
+    0%
+      text-shadow: 0 0 0 transparentize($warning, 0.3)
+      content: '\f111'
+    100%
+      text-shadow: 0px 0px 8px transparentize($warning, 0.3) 
+      content: '\f06a'
+    0%
+      text-shadow: 0 0 0 transparentize($warning, 0.3)
+      content: '\f111'
+
+  @keyframes pulse-icon-circle-info
+    0%
+      text-shadow: 0 0 0 transparentize($info, 0.3)
+      content: '\f111'
+    100%
+      text-shadow: 0px 0px 8px transparentize($info, 0.3) 
+      content: '\f05a'
+    0%
+      text-shadow: 0 0 0 transparentize($info, 0.3)
+      content: '\f111'
+  
+  @keyframes pulse-icon-circle-ready
+    0%
+      text-shadow: 0 0 0 transparentize($info, 0.3)
+      content: '\f111'
+    100%
+      text-shadow: 0px 0px 8px transparentize($info, 0.3) 
+      content: '\f35a'
+    0%
+      text-shadow: 0 0 0 transparentize($info, 0.3)
+      content: '\f111'
+  
+  @keyframes pulse-icon-circle-success
+    0%
+      text-shadow: 0 0 0 transparentize($info, 0.3)
+      content: '\f111'
+    100%
+      text-shadow: 0px 0px 8px transparentize($info, 0.3) 
+      content: '\f058'
+    0%
+      text-shadow: 0 0 0 transparentize($info, 0.3)
+      content: '\f111'
+  

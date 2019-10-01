@@ -1,0 +1,14 @@
+.cards-list
+  flex-direction: column
+  height: calc(100vh - 64px)
+  scroll-snap-type: y mandatory
+  webkit-scroll-snap-type: mandatory
+  webkit-scroll-snap-points-y: repeat(200px)
+  scroll-snap-type: mandatory
+  scroll-snap-points-y: repeat(200px)
+  scroll-padding: 20px 0 0 0
+  .card
+    margin-bottom: $space-2
+    scroll-snap-align: start
+    &:last-child
+      margin-bottom: $space-3

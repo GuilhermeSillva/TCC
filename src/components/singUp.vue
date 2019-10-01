@@ -42,27 +42,7 @@ export default {
 </script>
 
 <style scoped>
-input {
-  border-radius: 25px;
-  margin: 10px 0;
-  width: 20%;
-  cursor: pointer;
-  line-height: 30px;
-}
-button {
-  border-radius: 25px;
-  margin-top: 20px;
-  width: 200px;
-  height: 28px;
-  cursor: pointer;
-}
-p {
-  margin-top: 40px;
-  font-size: 13px;
-}
-p a {
-  text-decoration: underline;
-  cursor: pointer;
-}
+@import url('../assets/css/libs.css');
+@import url('../assets/css/style.css');
 
 </style>

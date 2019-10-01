@@ -1,0 +1,23 @@
+.map
+  height: 95%
+  svg
+    filter: drop-shadow( 2px 2px 4px rgba(0, 0, 0, .2))
+    g 
+      transform: scale(0.0023) translate(0,0)
+      @media screen and (min-width: 1400px)
+        transform: scale(.003565)
+      
+.jvectormap-label
+  display: none
+  position: absolute
+  width: 40px
+  height: 40px
+  top: 50%
+  left: 50%
+  background: white
+  border-radius: 80%
+  text-align: center
+  line-height: 40px
+  box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.2)
+  transition: all .2s ease-in-out
+  backface-visibility: hidden

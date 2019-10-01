@@ -1,18 +1,23 @@
 <template>
-  <div>
-    <h3>Entre</h3>
-    <input type="text" v-model='email' placeholder="Email" required />
-    <br />
-    <input type="password" v-model='password' placeholder="Senha" required />
-    <br />
-    <button @click='login'>Entrar</button>
-    <p>
-      Não possui conta?
-      <router-link to="sing-up">Crie uma!</router-link>
-    </p>
-    <p>
-      <router-link to="forgot-pass">Esqueci a senha!</router-link>
-    </p>
+  <div class="login container">
+    <div class="left-side">
+      <h3>Entre</h3>
+      <input type="text" v-model='email' class="form-input" placeholder="Email" required />
+      <br />
+      <input type="password" v-model='password' class="form-input" placeholder="Senha" required />
+      <br />
+      <button @click='login' class="btn btn-primary">Entrar</button>
+      <p>
+        Não possui conta?
+        <router-link to="sing-up">Crie uma!</router-link>
+      </p>
+      <p>
+        <router-link to="forgot-pass">Esqueci a senha!</router-link>
+      </p>
+    </div>
+    <div class="right-side" style="width:70%">
+      <img src="../assets/img/handshake.jpg" alt="Aperto de mão">
+    </div>
   </div>
 </template>
 
@@ -45,27 +50,6 @@ export default {
 </script>
 
 <style scoped>
-input {
-  border-radius: 25px;
-  margin: 10px 0;
-  width: 20%;
-  cursor: pointer;
-  line-height: 30px;
-}
-button {
-  border-radius: 25px;
-  margin-top: 20px;
-  width: 200px;
-  height: 28px;
-  cursor: pointer;
-}
-p {
-  margin-top: 40px;
-  font-size: 13px;
-}
-p a {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
+@import url('../assets/css/libs.css');
+@import url('../assets/css/style.css');
 </style>

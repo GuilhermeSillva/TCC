@@ -23,12 +23,6 @@ export default {
 </script>
 
 <style scoped>
-button {
-  border-radius: 25px;
-  margin-top: 20px;
-  width: 200px;
-  height: 28px;
-  cursor: pointer;
-}
-
+@import url('../assets/css/libs.css');
+@import url('../assets/css/style.css');
 </style>

@@ -1,0 +1,21 @@
+.login
+  display: flex
+  flex-direction: row
+  height: 100vh
+  .left-side
+    position: relative
+    width: 30%
+    .form
+      position: absolute
+      height: 100vh
+      width: 100%
+      .forgot-password
+        font-size: 14px
+        font-weight: 500
+        color: $secondary
+        transition: color .2s
+        &:hover
+          color: lighten($secondary, 30)
+  .right-side
+    img
+      height: 100%

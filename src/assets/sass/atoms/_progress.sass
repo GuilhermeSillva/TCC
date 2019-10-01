@@ -1,0 +1,48 @@
+%file-progress
+  display: flex
+  justify-content: center
+  progress 
+    display: block
+    max-width: 80%
+    height: ($space-1 + 2px)
+    margin: ($space-1 + 2px) auto 0 auto
+    border: none
+    background-color: lighten($primary, 45)
+    border-radius: 36px
+    -webkit-appearance: none
+    &::-moz-progress-bar
+      border-radius: 36px
+      background: $primary
+    &::-webkit-progress-bar
+      background-color: lighten($primary, 45)
+      border-radius: 50px
+    &::-webkit-progress-value
+      border-radius: 50px
+      background-color: $primary
+    &::-moz-progress-value
+      border-radius: 50px
+      background-color: $primary
+    &.danger  
+      background-color: lighten($danger, 20)
+      &::-moz-progress-bar
+        background: $danger
+      &::-webkit-progress-bar
+        background-color: lighten($danger, 20)
+      &::-webkit-progress-value
+        background-color:  $danger
+    &.warning  
+      background-color: lighten($warning, 20)
+      &::-moz-progress-bar
+        background: $warning
+      &::-webkit-progress-bar
+        background-color: lighten($warning, 20)
+      &::-webkit-progress-value
+        background-color:  $warning
+    &.success  
+      background-color: lighten($success, 20)
+      &::-moz-progress-bar
+        background: $success
+      &::-webkit-progress-bar
+        background-color: lighten($success, 20)
+      &::-webkit-progress-value
+        background-color:  $success

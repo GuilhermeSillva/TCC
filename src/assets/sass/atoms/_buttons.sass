@@ -1,0 +1,89 @@
+.btn
+  font-family: inherit
+  text-decoration: none
+  text-align: center
+  text-transform: uppercase
+  color: #fff
+  background-color: lighten($black, 10)
+  font-weight: 500
+  font-size: 16px
+  letter-spacing: .5px
+  -webkit-transition: background-color .2s ease-out
+  transition: background-color .2s ease-out
+  cursor: pointer
+  border: none
+  border-radius: 4px
+  display: inline-block
+  height: 3rem
+  line-height: 3rem
+  padding: 0 16px
+  vertical-align: middle
+  -webkit-tap-highlight-color: transparent
+  box-shadow: 4px 4px 10px -2px rgba(0,0,0,0.3)
+
+.btn-primary
+  background-color: $primary
+  &:hover
+    background-color: lighten($primary, 10)
+    box-shadow: 5px 5px 12px -2px rgba(0,0,0,0.3)
+  &:focus
+    background-color: darken($primary, 10)
+    box-shadow: 2px 2px 10px -2px rgba(0,0,0,0.3)
+
+.btn-outline-primary
+  color: $primary
+  background-color: transparent
+  height: 3rem
+  line-height: 3rem
+  box-shadow: none
+  text-transform: unset
+  border: 1px solid $primary
+  &:hover
+    color: $white
+    background-color: $primary
+    box-shadow: 2px 2px 10px -2px rgba(0,0,0,0.3)
+  &:focus
+    color: $white
+    background-color: darken($primary, 10)
+    box-shadow: 2px 2px 10px -2px rgba(0,0,0,0.3)
+
+.btn-outline-secondary
+  color: $secondary
+  background-color: transparent
+  height: 3rem
+  line-height: 3rem
+  box-shadow: none
+  text-transform: unset
+  border: 1px solid $secondary
+  transition: .2s 
+  &:hover
+    color: $white
+    background-image: linear-gradient(to right, #075b98, #0b78b0)
+  &:focus
+    color: $white
+    background-image: linear-gradient(to right, darken(#075b98, 10), darken(#0b78b0, 10))
+
+.btn-link
+  color: $secondary
+  background-color: transparent
+  height: unset
+  line-height: unset
+  box-shadow: none
+  text-transform: unset
+  &:hover
+    color: lighten($primary, 20)
+  &:focus
+    color: darken($primary, 10)
+
+%btn-search
+  border-radius: 0
+  border: none
+  box-shadow: none
+  background-color: transparent !important
+  color: $primary
+  cursor: pointer
+  padding: 0 $space-3
+  font-weight: 900
+  height: 100%
+  &:hover
+    color: lighten($primary, 20)

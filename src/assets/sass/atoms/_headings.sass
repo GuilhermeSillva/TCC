@@ -1,0 +1,40 @@
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  color: $black
+
+.lead
+  margin-top: $space-1
+  font-weight: 300
+  font-size: 20px
+  
+.name
+  font-weight: 500
+  &:hover 
+    color: $secondary
+    .fa
+      color: $secondary
+  .fa
+    font-size: 12px
+    height: fit-content
+    transition: .2s
+    font-weight: normal
+    margin-top: ($space-1 / 2)
+    
+.company
+  font-weight: 500
+  font-size: 12px
+  padding: 0 15px
+
+.arrow-up-success
+  font-family: 'Font Awesome 5 Pro'
+  font-weight: 900
+  color: $success
+  &:before
+    content: "\f0de"
+
+.arrow-down-danger
+  font-family: 'Font Awesome 5 Pro'
+  font-weight: 900
+  color: $danger
+  &:before
+    content: "\f0dd"

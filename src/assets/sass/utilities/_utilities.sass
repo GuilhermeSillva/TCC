@@ -1,0 +1,79 @@
+.content-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+.content-between
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.content-around
+  display: flex
+  justify-content: space-around
+  align-items: center
+
+.m-auto
+  margin-left: auto !important
+  margin-right: auto !important
+
+.p-absolute
+    position: absolute
+
+.padding-0
+  padding: 0 !important
+
+.margin-0
+  margin: 0 !important
+
+.align-center
+  text-align: center !important
+
+.align-left
+  text-align: left !important
+
+.justify-end
+  display: flex
+  justify-content: flex-end
+
+.align-items-start
+  display: flex
+  align-items: flex-start
+
+.align-items-center
+  display: flex
+  align-items: center
+
+.copyright
+  position: absolute
+  bottom: 0
+  right: $space-1
+
+.border-none
+  border: none !important
+
+.dropdown-menu.fade
+  display: block
+  opacity: 0
+  pointer-events: none
+  border: none
+  transform: translateY(-25px)
+
+.show > .dropdown-menu.fade
+  pointer-events: auto
+  opacity: 1
+  border: 1px solid lighten($black, 80)
+  transform: translateY(0)
+
+.dropdown-item
+  &:hover > .fa
+    transform: translateX(2px)
+  &:hover > .rotate
+    transform: rotate(-180deg)
+
+.fd-column
+  display: flex
+  flex-direction: column
+
+.shadow-3
+  box-shadow: 0 0 4px -1px rgba(0,0,0,0.2)

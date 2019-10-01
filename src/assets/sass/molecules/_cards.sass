@@ -1,0 +1,404 @@
+.card
+  position: relative
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  align-items: center
+  word-wrap: break-word
+  background-color: #fff
+  background-clip: border-box
+  border: 1px solid rgba(0,0,0,.125)
+  border-radius: ($space-1 - 2)
+  box-shadow: $shadow-2
+  .card-title
+    text-align: center
+    padding: $space-3 $space-2 0 $space-2
+  .card-description
+    display: flex
+    align-items: center
+    position: absolute
+    height: 100%
+    width: 100%
+    color: $black
+    padding: $space-1 $space-2
+    width: 90%
+    ul
+      li
+        margin: 0
+        font-weight: 500
+    @media screen and (min-width: 1400px)
+      justify-content: center
+      ul
+        text-align: center
+        li
+          margin: 0
+          font-weight: 500
+          font-size: 20px
+  .card-button
+    text-align: center
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    padding: $space-4 0
+  
+  .card-item
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 100%
+    .item-name
+      font-size: 16px
+
+  .percent-info
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: row    
+
+.card-portrait
+  min-height: 200px
+  min-width: 170px
+  @media screen and (min-width: 1400px)
+    min-height: 300px
+    min-width: 250px 
+
+.card-landscape
+  width: 350px
+  height: 120px
+  @media screen and (min-width: 1400px)
+    width: 500px 
+    height: 120px
+
+.card-sm-landscape
+  width: 350px
+  height: 60px
+  @media screen and (min-width: 1400px)
+    width: 500px 
+    height: 70px
+
+.map-card
+  padding: $space-2
+  padding-left: 0
+  width: 50%
+  height: calc(100vh - 152px)
+  background-color: #fff
+  background-clip: border-box
+  border: 1px solid lighten($black, 50)
+  border-radius: ($space-1 - 2)
+  box-shadow: 0 0 4px -1px rgba(0,0,0,0.2)
+  @media screen and (min-width: 1400px)
+    width: 50%
+
+
+%card-full
+  padding: $space-1 $space-2
+  width: 100%
+  height: calc(100% - 250px)
+  background-color: #fff
+  border: 1px solid lighten($black, 50)
+  border-radius: ($space-1 - 2)
+  box-shadow: 0 0 4px -1px rgba(0,0,0,0.2)
+  overflow-y: scroll
+  scroll-behavior: smooth
+  @extend %scrollbar
+  
+  &.border-secondary
+    .title
+      align-self: flex-start
+      width: 98%
+      h4
+        align-self: flex-start
+        color: $secondary
+  &.border-danger
+    .title
+      align-self: flex-start
+      width: 98%
+      h4
+        align-self: flex-start
+        color: $danger
+    &::-webkit-scrollbar-thumb
+      background-color: $danger
+  &.border-primary
+    .title
+      align-self: flex-start
+      width: 98%
+      h4
+        align-self: flex-start
+        color: $primary
+    &::-webkit-scrollbar-thumb
+      background-color: $primary
+
+  .files-table
+    font-size: .9em
+    font-weight: 500
+    thead 
+      tr
+        th
+          font-size: 1.2em !important 
+          &:last-child
+            text-align: right
+    tbody 
+      tr
+        td 
+          &:last-child
+            text-align: right
+          &.in-progress
+            color: $secondary
+          &.waiting
+            color: $primary
+
+.details-card
+  padding: $space-2
+  width: 54%
+  height: calc(100vh - 152px)
+  background-color: #fff
+  border: 1px solid lighten($black, 75)
+  border-radius: ($space-1 / 2)
+  box-shadow: 0 0 4px -1px rgba(0,0,0,0.2)
+  position: fixed
+  @media screen and (min-width: 1400px)
+    width: 55%
+  .headings
+    width: 98%
+    margin: 0 auto $space-2 auto
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    height: $space-5
+    .state-places
+      h2 
+        color: lighten($black, 20)
+        font-weight: 500
+  .files-card
+    height: 170px
+    width: 64%
+    box-shadow: inherit
+    &:hover
+      box-shadow: 1px 1px 6px -1px transparentize($black, .6)
+      border-color: lighten($black, 35)
+    .files-details
+      height: 50%
+      width: 98%
+      padding: $space-2
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .files-count
+        small
+          font-size: .7em
+          color: lighten($black, 20)
+        h4 
+          font-weight: 500
+      .info
+        display: flex
+        align-self: flex-start
+        &.warning
+          .text
+            color: $warning
+            margin-left: $space-1
+            font-weight: 500
+            height: 30px
+            line-height: 30px
+          & .icon
+            color: $warning
+            font-size: 1.5em
+          & .number
+            font-weight: bold
+        &.danger
+          .text
+            color: $danger
+            margin-left: $space-1
+            font-weight: 500
+            height: 30px
+            line-height: 30px
+          & .icon
+            color: $danger
+            font-size: 1.5em
+          & .number
+            font-weight: bold
+        @extend %alert-icons
+    .card-small
+      height: 50px
+      width: 30%
+      box-shadow: 2px 2px 4px -1px transparentize($black, .8)
+      padding: 0 $space-1
+      display: flex
+      align-items: center
+      &:hover
+        box-shadow: 1px 1px 6px -1px transparentize($black, .6)
+        border-color: lighten($primary, 45)
+      &.active
+        border-color: lighten($black, 30)
+        &:first-child
+          border-color: $secondary
+        &:nth-child(2)
+          border-color: $danger
+        &:last-child
+          border-color: $primary
+      .card-small-content
+        display: flex
+        flex-direction: column
+        align-self: center
+        justify-content: center
+        height: 100%
+        width: 100%
+        .files-count
+          font-weight: 500
+        .file-status
+          font-weight: 500
+          font-size: .8em
+  .chart-card
+    height: 170px
+    width: 34%
+    box-shadow: inherit
+  .card-full
+    @extend %card-full !optional
+    height: 200px
+    @media screen and (min-width: 1400px)
+      height: 500px
+
+.date-card
+  width: 100%
+  min-height: 200px
+  border-radius: ($space-1 / 2)
+  box-shadow: $shadow-3
+  border: 1px solid lighten($black, 70)
+  position: relative
+  padding: $space-2 $space-1
+  display: flex
+  align-items: center
+  .row, .col
+    margin: 0 !important
+  .row
+    display: flex
+    align-items: center
+  .border-right
+    border-right: 1px solid lighten($black, 60)
+  .date
+    height: calc(200px - 16px)
+    display: flex
+    flex-direction: column
+    align-items: center
+    align-self: flex-start
+    justify-content: center
+    padding: $space-1
+    h1 
+      font-size: 28px
+  .states
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    .card-thin
+      width: 100%
+      min-height: $space-4
+      padding: $space-1 $space-2
+      line-height: $space-1
+      border: 1px solid lighten($black, 80)
+      border-radius: 3px
+      margin-bottom: $space-1
+      box-shadow: 0 0 6px -2px transparentize($black, .85)
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      &.active
+        box-shadow: 0 0 0 1.5px $secondary
+      &:last-child
+        margin-bottom: 0
+      &:hover
+        border: 1px solid lighten($black, 65)
+        cursor: pointer
+      
+      .state-code
+        font-weight: bold
+        width: 10%
+      .separator
+        font-weight: bold
+        text-align: center
+        width: 15%
+      .details
+        font-weight: 500
+        text-align: center
+        color: lighten($black, 30)
+        font-size: .9em
+        width: 50%
+      .status
+        @extend %alert-icons
+        text-align: right
+        font-size: .95em
+        width: 25%
+
+.state-card
+  width: 100%
+  min-height: 220px
+  border-radius: ($space-1 / 2)
+  box-shadow: $shadow-3
+  border: 1px solid lighten($black, 70)
+  position: relative
+  padding: $space-2 $space-1
+  display: flex
+  align-items: center
+  .guides
+    width: 95%
+    height: 180px
+    margin-left: auto
+    margin-right: auto
+    align-self: center
+    .state-code
+      position: absolute
+      top: $space-1
+      left: $space-2
+      font-size: 2em
+      font-weight: 500
+    .left-items
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-evenly
+      margin-top: ($space-1 + 4px)
+    .col
+      .guide-top
+        text-align: center
+        p 
+          font-size: .75em
+          font-weight: 500
+          margin-top: 0
+      .guide-left
+        text-align: left
+        p 
+          font-size: .7em
+          font-weight: 500
+      .file-info
+        display: block
+        .date-status
+          display: flex
+          justify-content: center
+          margin-top: $space-2
+          .date-calendar
+            color: $primary
+            margin-right: $space-1
+            .fa-layers-text
+              font-weight: 500
+              font-size: 1.5em
+              color: $primary
+          @extend %alert-icons
+        .file-progress
+          @extend %file-progress
+
+.card-hover
+  transition: .2s
+  cursor: pointer
+  &:hover
+    box-shadow: $shadow-1
+
+.cards-wrapper
+  display: flex
+  justify-content: space-between
+  width: 98%
+  margin: 0 auto
