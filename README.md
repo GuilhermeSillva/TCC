@@ -2,7 +2,7 @@
 
 > Aplicativo para gerar estatísticas e controle de prontuário médico utilizando como base a tecnologia blockchain.
 
-# LEMBRE-SE DE COLOCAR A DESGRAÇA DAS INFOS DO FIREBASE NA CONFIG/FIREBASE.JS
+# LEMBRE-SE DE COLOCAR A lindeza :3 DAS INFOS DO FIREBASE NA CONFIG/FIREBASE.JS
 
 **
 
