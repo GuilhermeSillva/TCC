@@ -8,14 +8,11 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --hot --open",
     "start": "yarn run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js",
-    "serverstart": "babel-node --presets env src/server/index"
+    "build": "node build/build.js"
   },
   "dependencies": {
-    "babel-cli": "^6.26.0",
     "firebase": "^6.6.0",
     "firebase-admin": "^8.5.0",
-    "graphql-yoga": "^1.18.3",
     "js-yaml": "^3.13.1",
     "mime": "^2.4.4",
     "node-sass": "^4.12.0",
