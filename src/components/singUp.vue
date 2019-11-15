@@ -5,6 +5,8 @@
     <br />
     <input type="password" v-model='password' placeholder="Senha" required />
     <br />
+    <input type="password" v-model='passwordCheck' placeholder="Repita a senha" required />
+    <br />
     <button @click='singUp'>Criar conta</button>
     <p>
       Voltar para
@@ -21,11 +23,16 @@ export default {
   data () {
     return {
       email: '',
-      password: ''
+      password: '',
+      passwordCheck: ''
     }
   },
   methods: {
     singUp: function () {
+      if (this.password !== this.passwordCheck) {
+        alert('As senhas não são iguais')
+        return
+      }
       let self = this
       firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
         function (user) {
